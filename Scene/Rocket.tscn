@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bofs5wj52ja4m"]
+
+[ext_resource type="Script" uid="uid://bklwsmh3hs0ll" path="res://Script/rocket.gd" id="1_4v6ti"]
+[ext_resource type="Texture2D" uid="uid://dkdabggbimd7c" path="res://Resource/Image/Rocket.png" id="2_275fy"]
+[ext_resource type="Script" uid="uid://cexo5xd5e0l6t" path="res://Scene/rocketLine.gd" id="3_4v6ti"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1025827720]
+script = ExtResource("1_4v6ti")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=468833953]
+top_level = true
+z_index = -1
+use_parent_material = true
+width = 1.0
+joint_mode = 2
+script = ExtResource("3_4v6ti")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2062823779]
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("2_275fy")
