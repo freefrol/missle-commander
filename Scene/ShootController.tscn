@@ -3,13 +3,10 @@
 [ext_resource type="Script" uid="uid://bqlboyng30rvq" path="res://Script/ShootController.gd" id="1_wte88"]
 [ext_resource type="PackedScene" uid="uid://bofs5wj52ja4m" path="res://Scene/Rocket.tscn" id="2_qykhw"]
 
-[node name="ShootController" type="Node2D" unique_id=1019273811]
-
-[node name="Node2D" type="Node2D" parent="." unique_id=776822904 node_paths=PackedStringArray("rocketPosition")]
-z_index = 1
+[node name="ShootController" type="Node2D" unique_id=1019273811 node_paths=PackedStringArray("rocketPosition")]
 script = ExtResource("1_wte88")
 rocket_scene = ExtResource("2_qykhw")
-rocketPosition = NodePath("../Marker2D")
+rocketPosition = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1282798282]
 position = Vector2(10, 302)
