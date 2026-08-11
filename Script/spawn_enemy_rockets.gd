@@ -6,7 +6,7 @@ extends Node2D
 @export var max_angle := 20.0             # Максимальный угол отклонения (градусы)
 @export var speed := 200.0                # Скорость ракет
 @export var spawn_y_offset := -50.0       # Расстояние над экраном (отступ)
-
+@export var explodeOffset := 0.2
 var timer := 0.0
 var screen_size: Vector2
 
@@ -37,3 +37,4 @@ func spawn_enemy():
 	# Предполагаем, что у EnemyRocket есть переменные speed и direction
 	enemy.speed = speed
 	enemy.direction = direction
+	enemy.explodeY = screen_size.y * (1-explodeOffset)

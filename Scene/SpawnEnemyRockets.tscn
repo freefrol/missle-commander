@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://ckaaqyefylg85"]
 
 [ext_resource type="Script" uid="uid://cbpjxiyn3wufv" path="res://Script/spawn_enemy_rockets.gd" id="1_ap26f"]
+[ext_resource type="PackedScene" uid="uid://dgtjnjtoy887e" path="res://Scene/EnemyRocket.tscn" id="2_tdudt"]
 
 [node name="Node2D" type="Node2D" unique_id=67088876]
 script = ExtResource("1_ap26f")
+enemyRoket = ExtResource("2_tdudt")
+spawn_y_offset = 400.0

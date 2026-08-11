@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://dgtjnjtoy887e"]
 
-[ext_resource type="Script" uid="uid://bklwsmh3hs0ll" path="res://Script/rocket.gd" id="1_0nddg"]
+[ext_resource type="Script" uid="uid://bpp8w0xiwoo4r" path="res://Script/enemyRocket.gd" id="1_x7hcu"]
 [ext_resource type="Script" uid="uid://cexo5xd5e0l6t" path="res://Script/rocketLine.gd" id="2_x7hcu"]
 [ext_resource type="Texture2D" uid="uid://dkdabggbimd7c" path="res://Resource/Image/Rocket.png" id="3_j4gui"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=137259910]
-script = ExtResource("1_0nddg")
-speed = 250
+script = ExtResource("1_x7hcu")
 
 [node name="Line2D" type="Line2D" parent="." unique_id=78292128]
 top_level = true
