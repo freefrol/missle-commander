@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bklwsmh3hs0ll" path="res://Script/rocket.gd" id="1_4v6ti"]
 [ext_resource type="Texture2D" uid="uid://dkdabggbimd7c" path="res://Resource/Image/Rocket.png" id="2_275fy"]
-[ext_resource type="Script" uid="uid://cexo5xd5e0l6t" path="res://Scene/rocketLine.gd" id="3_4v6ti"]
+[ext_resource type="Script" uid="uid://cexo5xd5e0l6t" path="res://Script/rocketLine.gd" id="3_4v6ti"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1025827720]
 script = ExtResource("1_4v6ti")

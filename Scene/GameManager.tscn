@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://b3jrri8018472"]
 
-[ext_resource type="Script" uid="uid://rqamuoogylhe" path="res://Scene/game_manager.gd" id="1_hhlhx"]
+[ext_resource type="Script" uid="uid://rqamuoogylhe" path="res://Script/game_manager.gd" id="1_hhlhx"]
 [ext_resource type="PackedScene" uid="uid://ccppmf3pjvpih" path="res://Scene/ShootController.tscn" id="2_v52v0"]
+[ext_resource type="PackedScene" uid="uid://ckaaqyefylg85" path="res://Scene/SpawnEnemyRockets.tscn" id="3_udwf8"]
 
 [node name="Node2D" type="Node2D" unique_id=267857522]
 script = ExtResource("1_hhlhx")
 shootControllerScene = ExtResource("2_v52v0")
+spawnEnemyRocketsScene = ExtResource("3_udwf8")

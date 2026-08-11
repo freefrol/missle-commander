@@ -19,6 +19,7 @@ config/icon="res://Resource/Image/icon.svg"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/handheld/orientation=2
 
 [physics]
 
