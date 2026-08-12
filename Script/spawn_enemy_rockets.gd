@@ -25,16 +25,19 @@ func spawn_enemy():
 	add_child(enemy)
 	
 	# Случайная позиция по X в пределах экрана, Y — над экраном
-	var x_pos = randf_range(0, screen_size.x)
+	var x_pos = randf_range(0, screen_size.x/2)
 	enemy.global_position = Vector2(x_pos, (-screen_size.y/2)-spawn_y_offset)
 	
 	# Случайный угол в пределах [min_angle, max_angle]
+	
+	var targetRandom = Vector2(randf()*(screen_size.x/2), screen_size.y/2)
 	var angle_deg = randf_range(min_angle, max_angle)
 	var angle_rad = deg_to_rad(angle_deg)
-	var direction = Vector2( sin(angle_rad), cos(angle_rad) ).normalized()
+	var direction = (Vector2)(targetRandom - enemy.global_position).normalized() 
+	#var direction = Vector2( sin(angle_rad), cos(angle_rad) ).normalized()
 	
 	# Передаём скорость и направление вражеской ракете
 	# Предполагаем, что у EnemyRocket есть переменные speed и direction
 	enemy.speed = speed
 	enemy.direction = direction
-	enemy.explodeY = screen_size.y/2 * (1-explodeOffset)
+	enemy.explodeY = targetRandom.y * (1-explodeOffset)
