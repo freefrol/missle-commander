@@ -26,7 +26,7 @@ func spawn_enemy():
 	
 	# Случайная позиция по X в пределах экрана, Y — над экраном
 	var x_pos = randf_range(0, screen_size.x)
-	enemy.global_position = Vector2(x_pos, -spawn_y_offset)
+	enemy.global_position = Vector2(x_pos, (-screen_size.y/2)-spawn_y_offset)
 	
 	# Случайный угол в пределах [min_angle, max_angle]
 	var angle_deg = randf_range(min_angle, max_angle)
@@ -37,4 +37,4 @@ func spawn_enemy():
 	# Предполагаем, что у EnemyRocket есть переменные speed и direction
 	enemy.speed = speed
 	enemy.direction = direction
-	enemy.explodeY = screen_size.y * (1-explodeOffset)
+	enemy.explodeY = screen_size.y/2 * (1-explodeOffset)
