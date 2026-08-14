@@ -25,12 +25,12 @@ func spawn_enemy():
 	add_child(enemy)
 	
 	# Случайная позиция по X в пределах экрана, Y — над экраном
-	var x_pos = randf_range(0, screen_size.x/2)
+	var x_pos = randf_range(-screen_size.x/2, screen_size.x/2)
 	enemy.global_position = Vector2(x_pos, (-screen_size.y/2)-spawn_y_offset)
 	
 	# Случайный угол в пределах [min_angle, max_angle]
 	
-	var targetRandom = Vector2(randf()*(screen_size.x/2), screen_size.y/2)
+	var targetRandom = Vector2(randf_range(-screen_size.x/2, screen_size.x/2), screen_size.y/2)
 	var angle_deg = randf_range(min_angle, max_angle)
 	var angle_rad = deg_to_rad(angle_deg)
 	var direction = (Vector2)(targetRandom - enemy.global_position).normalized() 

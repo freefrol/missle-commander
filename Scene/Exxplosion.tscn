@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://3ffosml1c2j7"]
+
+[ext_resource type="Script" uid="uid://t7r0erqau7xt" path="res://Script/Explosion.gd" id="1_h47wv"]
+[ext_resource type="Shape2D" uid="uid://cl4w1e3jnf1ns" path="res://Resource/new_circle_shape_2d.tres" id="2_jmk5a"]
+[ext_resource type="Texture2D" uid="uid://djljikak5vcpo" path="res://Resource/Image/new_gradient_texture_2d.tres" id="3_8ncwy"]
+
+[node name="Area2D" type="Area2D" unique_id=1925894977]
+script = ExtResource("1_h47wv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1017594066]
+shape = ExtResource("2_jmk5a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1157561682]
+texture = ExtResource("3_8ncwy")

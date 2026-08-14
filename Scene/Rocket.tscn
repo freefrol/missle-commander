@@ -2,10 +2,13 @@
 
 [ext_resource type="Script" uid="uid://bklwsmh3hs0ll" path="res://Script/rocket.gd" id="1_4v6ti"]
 [ext_resource type="Texture2D" uid="uid://dkdabggbimd7c" path="res://Resource/Image/Rocket.png" id="2_275fy"]
+[ext_resource type="PackedScene" uid="uid://3ffosml1c2j7" path="res://Scene/Exxplosion.tscn" id="2_vb3ml"]
 [ext_resource type="Script" uid="uid://cexo5xd5e0l6t" path="res://Script/rocketLine.gd" id="3_4v6ti"]
+[ext_resource type="Shape2D" uid="uid://babvwymfvrki2" path="res://Resource/new_capsule_shape_2d.tres" id="5_ryb06"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1025827720]
 script = ExtResource("1_4v6ti")
+explosionScene = ExtResource("2_vb3ml")
 
 [node name="Line2D" type="Line2D" parent="." unique_id=468833953]
 top_level = true
@@ -16,5 +19,9 @@ joint_mode = 2
 script = ExtResource("3_4v6ti")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2062823779]
+position = Vector2(-1.9999999, -1.9999999)
 scale = Vector2(0.025, 0.025)
 texture = ExtResource("2_275fy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=546243334]
+shape = ExtResource("5_ryb06")
