@@ -1,0 +1,21 @@
+extends Node2D
+
+@export var timer = 3
+
+signal readySilos
+
+var time = 0
+var isReady = false
+
+func _ready() -> void:
+	pass
+	
+func _process(delta: float) -> void:
+	if isReady:
+		return
+		
+	time += delta
+	
+	if time >= timer:
+		isReady = true
+		readySilos.emit()
