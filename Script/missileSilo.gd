@@ -18,4 +18,8 @@ func _process(delta: float) -> void:
 	
 	if time >= timer:
 		isReady = true
+		timer = 0
 		readySilos.emit()
+		
+func restartSilos():
+		isReady = true
