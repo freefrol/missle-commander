@@ -17,5 +17,6 @@ func _physics_process(delta: float) -> void:
 func explode():
 	queue_free()
 	var explosion = explosionScene.instantiate()
+	explosion.maxRadius = 100
 	get_tree().current_scene.add_child(explosion)
 	explosion.global_position = global_position

@@ -8,6 +8,7 @@
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1025827720]
 script = ExtResource("1_4v6ti")
+explodeRadius = 150
 explosionScene = ExtResource("2_vb3ml")
 
 [node name="Line2D" type="Line2D" parent="." unique_id=468833953]
