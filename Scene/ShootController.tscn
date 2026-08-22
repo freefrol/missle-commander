@@ -4,21 +4,22 @@
 [ext_resource type="PackedScene" uid="uid://bofs5wj52ja4m" path="res://Scene/Rocket.tscn" id="2_qykhw"]
 [ext_resource type="PackedScene" uid="uid://bln5shpnfdpxj" path="res://Scene/MissileSilo.tscn" id="3_qykhw"]
 
-[node name="ShootController" type="Node2D" unique_id=1019273811 node_paths=PackedStringArray("rocketPosition", "silos")]
+[node name="ShootController" type="Node2D" unique_id=1019273811 node_paths=PackedStringArray("silos")]
 script = ExtResource("1_wte88")
 rocket_scene = ExtResource("2_qykhw")
-rocketPosition = NodePath("Marker2D")
 silos = [NodePath("Silos/Node2D"), NodePath("Silos/Node2D2"), NodePath("Silos/Node2D3")]
-
-[node name="Marker2D" type="Marker2D" parent="." unique_id=1282798282]
-position = Vector2(10, 302)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=363492304]
 
 [node name="Silos" type="Node2D" parent="." unique_id=1945760255]
 
 [node name="Node2D" parent="Silos" unique_id=1912023272 instance=ExtResource("3_qykhw")]
+position = Vector2(-500, 300)
+reloadTime = 1
 
 [node name="Node2D2" parent="Silos" unique_id=1726605861 instance=ExtResource("3_qykhw")]
+position = Vector2(0, 300)
+reloadTime = 1
 
 [node name="Node2D3" parent="Silos" unique_id=103213370 instance=ExtResource("3_qykhw")]
+position = Vector2(500, 300)

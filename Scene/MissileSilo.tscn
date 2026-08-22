@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://b02kect4j8dp2" path="res://Script/missileSilo.gd" id="1_4qy6f"]
 
-[node name="Node2D" type="Node2D" unique_id=1912023272]
+[node name="Node2D" type="Node2D" unique_id=1912023272 node_paths=PackedStringArray("firePoint")]
 script = ExtResource("1_4qy6f")
+firePoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1747560644]
