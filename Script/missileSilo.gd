@@ -1,8 +1,10 @@
+class_name missileSilo
 extends Node2D
 
 @export var timer = 3
+@export var firePoint: Marker2D
 
-signal readySilos
+signal readySilos(silo:missileSilo)
 
 var time = 0
 var isReady = false
@@ -19,7 +21,7 @@ func _process(delta: float) -> void:
 	if time >= timer:
 		isReady = true
 		timer = 0
-		readySilos.emit()
+		readySilos.emit(self)
 		
 func restartSilos():
-		isReady = true
+		isReady = false
